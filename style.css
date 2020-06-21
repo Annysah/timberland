@@ -6,7 +6,7 @@
 
 .container {
     width: 100%;
-    height: 100vh;
+    height: 920px;
 }
 
 .header {
@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 .logo {
@@ -49,34 +49,99 @@ ul li a {
 .top-left {
     margin-left: 100px;
 }
-
+ 
 .main {
     display: grid;
     grid-template-areas: "box-1 box-2 box-3" "box-1 box-4 box-4 ";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 1.5em;
     padding: 50px;
 }
 
 .box-1 {
     grid-area: box-1;
+    border: 1px solid #eee;
+    background: #eee;
+    padding-top: 50px;
+    width: 500px;
+    height: 685px;
 }
 
 .box-2 {
     grid-area: box-2;
+    border: 1px solid #eee;
+    background: #eee;
 }
 
 .box-3 {
     grid-area: box-3;
+    border: 1px solid #eee;
+    background: #eee;
+    width: 330px;
+    height: 400px;
 }
 
 .box-4 {
     grid-area: box-4;
+    border: 1px solid #eee;
+    background: #eee;
+    width: 706px;
+    height: 310px;
 }
 
 .details {
-    margin-top: -30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.box-1 .details {
+    margin-top: 65px;
+}
+
+.box-2 .details {
+    margin-top: 34px;
+}
+
+.box-3 .details {
+    margin-top: -22px;
+}
+
+.box-4 .details {
+    margin-top: -10px;
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        display: inline-block;
+    }
+
+    ul {
+        padding-top: 20px;
+    }
+
+    .top-left {
+        padding-top: 20px;
+        align-items: center;
+    }
+
+    .top-left a:hover {
+        color: #fff;
+        background-color: #000;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .main {
+        grid-template-areas: "box-1" "box-2" "box-3" "box-4"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+    }
+}
+
+.details {
+    margin-top: 5px;
     font-size: 15px;
     font-weight: 600;
 }
@@ -107,5 +172,35 @@ ul li a {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-column-gap: 1em;
+        width: 400px;
+        height: 400px;
+    }
+
+    .box-1 img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .box-1 .details {
+        margin-top: 260px;
+    }
+
+    .box-2 img {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .box-3 img {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .box-4 img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .box-4 .details {
+        margin-top: -25px;
     }
 }
